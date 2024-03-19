@@ -1,0 +1,25 @@
+.main-nav {
+}
+
+.searchBar {
+  width: 60%;
+  border: none;
+  height: 5vh;
+  border-radius: 5vh;
+  background: #c9c8c8;
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  padding-left: 1%;
+}
+.searchBar:hover {
+  background: #e6e0e0;
+}
+.searchButton {
+  border: 2px solid gray;
+  font-weight: bolder;
+  border-radius: 5vh;
+}
+.searchButton:checked {
+  border-bottom: 2px solid red;
+}
