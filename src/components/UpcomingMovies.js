@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 
 const UpcomingMovies = () => {
     const [upcomingMovies, setUpcomingMovies] = useState()
-    const data = useSelector((state) => state.app.movies)
-    console.log(data, 'kkkkkkkkkkkkkkkooooooooooooooo');
+    const data = useSelector((state) => state.app.upcoming)
+
     useEffect(() => {
         setUpcomingMovies(data)
     })

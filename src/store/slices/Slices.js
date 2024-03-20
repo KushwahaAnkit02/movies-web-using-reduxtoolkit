@@ -18,6 +18,7 @@ export const slices = createSlice({
         movies: [],
         trailers: [],
         upcoming: [],
+        topBoxOffice: [],
         loading: false,
         error: null,
     },
@@ -29,15 +30,17 @@ export const slices = createSlice({
             })
         builder
             .addCase(getDataFromApi.fulfilled, (state, action) => {
-                console.log(action.payload.movies, 'upcoming');
+                // console.log(action.payload.movies, 'paylload');
                 state.loading = false
-                if (action.payload.movies) {
-                    state.movies = action.payload.movies
+                if (action.payload.movies[0].list) {
+                    state.upcoming = action.payload.movies
+                } else if (action.payload.movies[0].weekendGross) {
+                    state.topBoxOffice = action.payload.movies
 
+                } else if (action.payload.movies) {
+                    state.movies = action.payload.movies
                 } else if (action.payload.trailers) {
                     state.trailers = action.payload.trailers
-                } else if (state.payload.movies.list) {
-                    state.upcoming = action.payload.movies
                 }
             })
         builder
