@@ -6,6 +6,7 @@ import Trailers from './components/Trailers';
 import UpcomingMovies from './components/UpcomingMovies';
 import TopBoxOfficeMovies from './components/TopBoxOfficeMovies';
 
+
 function App() {
   return (
     <BrowserRouter>
